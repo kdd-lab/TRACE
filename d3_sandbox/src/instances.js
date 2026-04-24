@@ -1,11 +1,10 @@
 const abaloneInstances = [
-  62, 83,196, 228, 666, 675,
-  759, 799, 1073, 1081
+  62, 83, 1073
 ];
 
-const germanInstances = Array.from({ length: 300 }, (_, index) => index);
+const germanInstances = [11, 17, 70, 55];
 
-const irisInstances = [0, 1, 11, 20, 23, 34,39];
+const irisInstances = [20, 34, 39];
 
 function buildDatasetEntries(datasetLabel, basePath, ids) {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');

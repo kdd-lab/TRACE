@@ -68,7 +68,7 @@ function resolveInitialPath() {
 }
 
 async function initViewer() {
-  // buildSelectOptions();
+  buildSelectOptions();
 
   const initialPath = resolveInitialPath();
   if (!initialPath) {
