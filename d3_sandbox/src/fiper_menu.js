@@ -772,7 +772,7 @@ function FiperClassificationBox() {
       .attr('font-weight', 400)
       .attr('dy', '1em')
       .attr('fill', FTTemplate.TEXT_COLOR)
-      .html(d => text2tspan(`_*Classification:*_ Predicted class is _*${d.predicted_class}*_ with a probability of _*${formatValue(d.predicted_proba[d.predicted_class])}*_`, 50, GUTTER));
+      .html(d => text2tspan(`_*Classification:*_ Predicted class is _*${d.predicted_class}*_ with a probability of _*${formatValue(d.predicted_proba[d.predicted_class])}*_`, 44, GUTTER));
 
     const pprobaBars = FiperMenuClassesBarChart().width(width - GUTTER)
       .height(SINGLE_FEATURE_HEIGHT / 2);
