@@ -114,7 +114,7 @@ function FiperMenuCRule() {
 
 function FiperMenuOrderBy() {
   const orderByOptions = {
-    'Feature Importance': true, Alphabetical: false, 'Rules first': false, 'Counter Rules first': false,
+    'Feature Importance': false, Alphabetical: false, 'Rules first': true, 'Counter Rules first': false,
   };
 
   function me(selection) {

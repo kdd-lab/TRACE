@@ -1834,7 +1834,19 @@ function preprocessData(data) {
   // concatenate cEntries and nEntries into a single array
   const aEntries = cEntries.concat(nEntries);
   // sort the entries by feature importance
-  aEntries.sort((a, b) => (b.feature_importance) - (a.feature_importance));
+  // aEntries.sort((a, b) => (b.feature_importance) - (a.feature_importance));
+
+  // sort the entries by rules and counter rules first
+  aEntries.sort((a, b) => {
+    const aRules = Object.values(a.rulePredicateMap).filter(v => v).length;
+    const bRules = Object.values(b.rulePredicateMap).filter(v => v).length;
+    if (aRules === bRules) {
+      const aCRules = Object.values(a.cRulesRelevanceMap).filter(v => v > 0).length;
+      const bCRules = Object.values(b.cRulesRelevanceMap).filter(v => v > 0).length;
+      return bCRules - aCRules;
+    }
+    return bRules - aRules;
+  });
 
   const explanationDescriptor = {
     features: aEntries,
@@ -1846,7 +1858,7 @@ function preprocessData(data) {
     filterCRules: false,
     filterNoRules: false,
     textVersion: false,
-    progressStatus: ['Classification', 'Feature Values', 'Rules', 'Counter Rules'], // is one of ['Classification', 'Feature Values', 'Rules', 'Counter Rules', 'Feature Importance']
+    progressStatus: ['Classification', 'Feature Values', 'Rules', 'Counter Rules', 'Feature Importance'], // is one of ['Classification', 'Feature Values', 'Rules', 'Counter Rules', 'Feature Importance']
   };
   return explanationDescriptor;
 }
