@@ -17,19 +17,19 @@
             "instance_value": 5.4,
             "rule": [],
             "crules": {
-                "C0": [
+                "C1": [
                     [
                         {
                             "att": "sepal.length",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 5.568155765533447
+                            "thr": 6.065840721130371
                         },
                         "Setosa"
                     ]
                 ]
             },
-            "feature_importance": "sepal.length"
+            "feature_importance": 0.0039284349898884635
         },
         {
             "index": 1,
@@ -47,8 +47,29 @@
             },
             "instance_value": 3.0,
             "rule": [],
-            "crules": {},
-            "feature_importance": "sepal.width"
+            "crules": {
+                "C1": [
+                    [
+                        {
+                            "att": "sepal.width",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 3.7177401781082153
+                        },
+                        "Setosa"
+                    ],
+                    [
+                        {
+                            "att": "sepal.width",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 2.7141796350479126
+                        },
+                        "Setosa"
+                    ]
+                ]
+            },
+            "feature_importance": 0.008595108220837758
         },
         {
             "index": 2,
@@ -70,17 +91,8 @@
                     {
                         "att": "petal.length",
                         "is_continuous": true,
-                        "op": "<=",
-                        "thr": 4.83771824836731
-                    },
-                    "Versicolor"
-                ],
-                [
-                    {
-                        "att": "petal.length",
-                        "is_continuous": true,
                         "op": ">",
-                        "thr": 2.4582812786102295
+                        "thr": 2.4678544998168945
                     },
                     "Versicolor"
                 ]
@@ -92,16 +104,7 @@
                             "att": "petal.length",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 4.83771824836731
-                        },
-                        "Setosa"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 2.4582812786102295
+                            "thr": 2.4678544998168945
                         },
                         "Setosa"
                     ]
@@ -112,24 +115,13 @@
                             "att": "petal.length",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 2.4582812786102295
+                            "thr": 4.703995227813721
                         },
                         "Setosa"
                     ]
-                ],
-                "C2": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 4.83771824836731
-                        },
-                        "Versicolor"
-                    ]
                 ]
             },
-            "feature_importance": "petal.length"
+            "feature_importance": 0.3180358509691832
         },
         {
             "index": 3,
@@ -151,8 +143,17 @@
                     {
                         "att": "petal.width",
                         "is_continuous": true,
+                        "op": "<=",
+                        "thr": 1.7612375020980835
+                    },
+                    "Versicolor"
+                ],
+                [
+                    {
+                        "att": "petal.width",
+                        "is_continuous": true,
                         "op": ">",
-                        "thr": 0.6925265789031982
+                        "thr": 0.8356577754020691
                     },
                     "Versicolor"
                 ]
@@ -164,33 +165,33 @@
                             "att": "petal.width",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 0.6925265789031982
+                            "thr": 1.7612375020980835
                         },
                         "Setosa"
-                    ]
-                ],
-                "C2": [
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.6948701739311218
-                        },
-                        "Versicolor"
                     ],
                     [
                         {
                             "att": "petal.width",
                             "is_continuous": true,
                             "op": ">",
-                            "thr": 0.6256349384784698
+                            "thr": 0.8356577754020691
                         },
-                        "Versicolor"
+                        "Setosa"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "petal.width",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.7369338870048523
+                        },
+                        "Setosa"
                     ]
                 ]
             },
-            "feature_importance": "petal.width"
+            "feature_importance": 0.6694406058200906
         }
     ],
     "predicted_class": "Versicolor",

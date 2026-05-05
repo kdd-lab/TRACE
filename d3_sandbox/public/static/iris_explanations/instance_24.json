@@ -21,37 +21,19 @@
                         "att": "sepal.length",
                         "is_continuous": true,
                         "op": "<=",
-                        "thr": 6.104347109421484
-                    },
-                    "Versicolor"
-                ],
-                [
-                    {
-                        "att": "sepal.length",
-                        "is_continuous": true,
-                        "op": ">",
-                        "thr": 5.684517854029698
+                        "thr": 6.044595241546631
                     },
                     "Versicolor"
                 ]
             ],
             "crules": {
-                "C2": [
-                    [
-                        {
-                            "att": "sepal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 7.082371053710084
-                        },
-                        "Virginica"
-                    ],
+                "C0": [
                     [
                         {
                             "att": "sepal.length",
                             "is_continuous": true,
                             "op": ">",
-                            "thr": 6.700624208162036
+                            "thr": 6.044595241546631
                         },
                         "Virginica"
                     ]
@@ -61,76 +43,14 @@
                         {
                             "att": "sepal.length",
                             "is_continuous": true,
-                            "op": ">",
-                            "thr": 7.082371053710084
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C5": [
-                    [
-                        {
-                            "att": "sepal.length",
-                            "is_continuous": true,
                             "op": "<=",
-                            "thr": 6.700624208162036
+                            "thr": 6.044595241546631
                         },
                         "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "sepal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 6.104347109421484
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C6": [
-                    [
-                        {
-                            "att": "sepal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 5.684517854029698
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C8": [
-                    [
-                        {
-                            "att": "sepal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 6.104347109421484
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "sepal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 5.684517854029698
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C13": [
-                    [
-                        {
-                            "att": "sepal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 5.684517854029698
-                        },
-                        "Versicolor"
                     ]
                 ]
             },
-            "feature_importance": "sepal.length"
+            "feature_importance": 0.031703045598569644
         },
         {
             "index": 1,
@@ -153,16 +73,7 @@
                         "att": "sepal.width",
                         "is_continuous": true,
                         "op": "<=",
-                        "thr": 3.200381854944474
-                    },
-                    "Versicolor"
-                ],
-                [
-                    {
-                        "att": "sepal.width",
-                        "is_continuous": true,
-                        "op": ">",
-                        "thr": 2.898624036451463
+                        "thr": 4.064295530319214
                     },
                     "Versicolor"
                 ]
@@ -174,20 +85,9 @@
                             "att": "sepal.width",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 3.783280296530354
+                            "thr": 4.064295530319214
                         },
-                        "Setosa"
-                    ]
-                ],
-                "C1": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Setosa"
+                        "Virginica"
                     ]
                 ],
                 "C2": [
@@ -196,9 +96,9 @@
                             "att": "sepal.width",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 3.783280296530354
+                            "thr": 3.1146481037139893
                         },
-                        "Virginica"
+                        "Setosa"
                     ]
                 ],
                 "C3": [
@@ -207,150 +107,13 @@
                             "att": "sepal.width",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 3.783280296530354
+                            "thr": 4.064295530319214
                         },
                         "Virginica"
-                    ]
-                ],
-                "C4": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C5": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 2.898624036451463
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C6": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C7": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C8": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.200381854944474
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 2.898624036451463
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C9": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C10": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C11": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 3.9847272456356655
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C12": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.9847272456356655
-                        },
-                        "Setosa"
-                    ],
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 3.8826355128730996
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C13": [
-                    [
-                        {
-                            "att": "sepal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 3.783280296530354
-                        },
-                        "Versicolor"
                     ]
                 ]
             },
-            "feature_importance": "sepal.width"
+            "feature_importance": 0.10694067362387188
         },
         {
             "index": 2,
@@ -373,7 +136,7 @@
                         "att": "petal.length",
                         "is_continuous": true,
                         "op": "<=",
-                        "thr": 4.825770342543244
+                        "thr": 4.848679304122925
                     },
                     "Versicolor"
                 ],
@@ -382,7 +145,7 @@
                         "att": "petal.length",
                         "is_continuous": true,
                         "op": ">",
-                        "thr": 4.166629840627014
+                        "thr": 2.392759323120117
                     },
                     "Versicolor"
                 ]
@@ -393,10 +156,19 @@
                         {
                             "att": "petal.length",
                             "is_continuous": true,
-                            "op": ">",
-                            "thr": 5.625780527730048
+                            "op": "<=",
+                            "thr": 4.848679304122925
                         },
-                        "Setosa"
+                        "Virginica"
+                    ],
+                    [
+                        {
+                            "att": "petal.length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 2.392759323120117
+                        },
+                        "Virginica"
                     ]
                 ],
                 "C1": [
@@ -404,10 +176,10 @@
                         {
                             "att": "petal.length",
                             "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.3830835384161442
+                            "op": ">",
+                            "thr": 4.848679304122925
                         },
-                        "Setosa"
+                        "Virginica"
                     ]
                 ],
                 "C2": [
@@ -416,18 +188,9 @@
                             "att": "petal.length",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 5.2778483657393
+                            "thr": 2.392759323120117
                         },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 2.5043208909115338
-                        },
-                        "Virginica"
+                        "Setosa"
                     ]
                 ],
                 "C3": [
@@ -436,7 +199,7 @@
                             "att": "petal.length",
                             "is_continuous": true,
                             "op": "<=",
-                            "thr": 5.2778483657393
+                            "thr": 4.848679304122925
                         },
                         "Virginica"
                     ],
@@ -445,193 +208,13 @@
                             "att": "petal.length",
                             "is_continuous": true,
                             "op": ">",
-                            "thr": 2.5043208909115338
+                            "thr": 3.8151572942733765
                         },
                         "Virginica"
-                    ]
-                ],
-                "C4": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 5.625780527730048
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 5.2778483657393
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C5": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 5.2778483657393
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 4.166629840627014
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C6": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 4.803201191290864
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 4.606050293072425
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C7": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 2.5043208909115338
-                        },
-                        "Setosa"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 1.9370636988796397
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C8": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 5.2778483657393
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 4.825770342543244
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C9": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.9370636988796397
-                        },
-                        "Setosa"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 1.7445912128880985
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C10": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.7445912128880985
-                        },
-                        "Setosa"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 1.3830835384161442
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C11": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 4.808748157823637
-                        },
-                        "Setosa"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 4.031272939392204
-                        },
-                        "Setosa"
-                    ]
-                ],
-                "C13": [
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 5.2778483657393
-                        },
-                        "Versicolor"
-                    ],
-                    [
-                        {
-                            "att": "petal.length",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 2.5043208909115338
-                        },
-                        "Versicolor"
                     ]
                 ]
             },
-            "feature_importance": "petal.length"
+            "feature_importance": 0.7423423778441093
         },
         {
             "index": 3,
@@ -654,37 +237,30 @@
                         "att": "petal.width",
                         "is_continuous": true,
                         "op": "<=",
-                        "thr": 1.840297130348871
-                    },
-                    "Versicolor"
-                ],
-                [
-                    {
-                        "att": "petal.width",
-                        "is_continuous": true,
-                        "op": ">",
-                        "thr": 1.3866860274153587
+                        "thr": 1.8575249910354614
                     },
                     "Versicolor"
                 ]
             ],
             "crules": {
-                "C2": [
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.840297130348871
-                        },
-                        "Virginica"
-                    ],
+                "C0": [
                     [
                         {
                             "att": "petal.width",
                             "is_continuous": true,
                             "op": ">",
-                            "thr": 1.3866860274153587
+                            "thr": 1.3670638799667358
+                        },
+                        "Virginica"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "petal.width",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 1.7022095322608948
                         },
                         "Virginica"
                     ]
@@ -694,74 +270,14 @@
                         {
                             "att": "petal.width",
                             "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.840297130348871
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
                             "op": ">",
-                            "thr": 1.3866860274153587
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C5": [
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.840297130348871
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 1.3866860274153587
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C6": [
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 1.840297130348871
-                        },
-                        "Virginica"
-                    ]
-                ],
-                "C8": [
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
-                            "op": "<=",
-                            "thr": 1.840297130348871
-                        },
-                        "Virginica"
-                    ],
-                    [
-                        {
-                            "att": "petal.width",
-                            "is_continuous": true,
-                            "op": ">",
-                            "thr": 1.3866860274153587
+                            "thr": 1.8575249910354614
                         },
                         "Virginica"
                     ]
                 ]
             },
-            "feature_importance": "petal.width"
+            "feature_importance": 0.1190139029334491
         }
     ],
     "predicted_class": "Versicolor",
