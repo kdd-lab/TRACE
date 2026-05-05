@@ -1,0 +1,1330 @@
+{
+    "features": [
+        {
+            "index": 1,
+            "name": "Length",
+            "rname": "Length",
+            "type": "numeric",
+            "eda": {
+                "min": 0.075,
+                "max": 0.815,
+                "mean": 0.5239920995930094,
+                "std": 0.12009291256479956,
+                "q1": 0.45,
+                "q3": 0.615,
+                "median": 0.545
+            },
+            "instance_value": 0.44,
+            "rule": [],
+            "crules": {
+                "C4": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.4427647739648819
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C7": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.4098879247903824
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C8": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.45903877913951874
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.41606974601745605
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C12": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.41606974601745605
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C13": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.45903877913951874
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.41606974601745605
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.035525128136589534
+        },
+        {
+            "index": 2,
+            "name": "Diameter",
+            "rname": "Diameter",
+            "type": "numeric",
+            "eda": {
+                "min": 0.055,
+                "max": 0.65,
+                "mean": 0.40788125448886764,
+                "std": 0.09923986613365945,
+                "q1": 0.35,
+                "q3": 0.48,
+                "median": 0.425
+            },
+            "instance_value": 0.34,
+            "rule": [
+                [
+                    {
+                        "att": "Diameter",
+                        "is_continuous": true,
+                        "op": ">",
+                        "thr": 0.2863113731145859
+                    },
+                    "2 - medium"
+                ]
+            ],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.3376369774341583
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2863113731145859
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2863113731145859
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C5": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2863113731145859
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C6": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2863113731145859
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C7": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2863113731145859
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C8": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.3467525392770767
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2179175280034542
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C10": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.3376369774341583
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C11": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.3376369774341583
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C12": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.3467525392770767
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C13": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.3467525392770767
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2179175280034542
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.09228021856393503
+        },
+        {
+            "index": 3,
+            "name": "Height",
+            "rname": "Height",
+            "type": "numeric",
+            "eda": {
+                "min": 0.0,
+                "max": 1.13,
+                "mean": 0.13951639932966242,
+                "std": 0.041827056607257274,
+                "q1": 0.115,
+                "q3": 0.165,
+                "median": 0.14
+            },
+            "instance_value": 0.105,
+            "rule": [
+                [
+                    {
+                        "att": "Height",
+                        "is_continuous": true,
+                        "op": ">",
+                        "thr": 0.0817096121609211
+                    },
+                    "2 - medium"
+                ]
+            ],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2512142099440098
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2949054427444935
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2787900008261204
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.0817096121609211
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C5": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C6": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C7": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C8": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.6366283297538757
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09529650956392288
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C9": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09529650956392288
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C10": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2512142099440098
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C11": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2512142099440098
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.0817096121609211
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C12": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09529650956392288
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C13": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.6366283297538757
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09529650956392288
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.16759266217284782
+        },
+        {
+            "index": 4,
+            "name": "Whole weight",
+            "rname": "Whole weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.002,
+                "max": 2.8255,
+                "mean": 0.8287421594445774,
+                "std": 0.4903890182309977,
+                "q1": 0.4415,
+                "q3": 1.153,
+                "median": 0.7995
+            },
+            "instance_value": 0.402,
+            "rule": [
+                [
+                    {
+                        "att": "Whole weight",
+                        "is_continuous": true,
+                        "op": "<=",
+                        "thr": 0.6892812550067902
+                    },
+                    "2 - medium"
+                ],
+                [
+                    {
+                        "att": "Whole weight",
+                        "is_continuous": true,
+                        "op": ">",
+                        "thr": 0.3393007069826126
+                    },
+                    "2 - medium"
+                ]
+            ],
+            "crules": {
+                "C1": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.6892812550067902
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C5": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.9942530691623688
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.6892812550067902
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C6": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 1.8545718789100647
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 1.4898128509521484
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C7": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.3393007069826126
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.22771594673395157
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C8": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.597612053155899
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C9": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.597612053155899
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C12": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.597612053155899
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C13": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.597612053155899
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.10936185850530078
+        },
+        {
+            "index": 5,
+            "name": "Shucked weight",
+            "rname": "Shucked weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.001,
+                "max": 1.488,
+                "mean": 0.35936748862820206,
+                "std": 0.22196294903322014,
+                "q1": 0.186,
+                "q3": 0.502,
+                "median": 0.336
+            },
+            "instance_value": 0.1305,
+            "rule": [
+                [
+                    {
+                        "att": "Shucked weight",
+                        "is_continuous": true,
+                        "op": "<=",
+                        "thr": 0.2925756052136421
+                    },
+                    "2 - medium"
+                ]
+            ],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.17093652486801147
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2925756052136421
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2925756052136421
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2925756052136421
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C5": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2925756052136421
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.11483738571405411
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C6": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2925756052136421
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.11483738571405411
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C7": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2925756052136421
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C8": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.19565358012914658
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C9": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.19565358012914658
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C10": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.17093652486801147
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C11": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.17093652486801147
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C12": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.19565358012914658
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C13": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.19565358012914658
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.18705627951338516
+        },
+        {
+            "index": 6,
+            "name": "Viscera weight",
+            "rname": "Viscera weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.0005,
+                "max": 0.76,
+                "mean": 0.1805936078525257,
+                "std": 0.10961425025968446,
+                "q1": 0.0935,
+                "q3": 0.253,
+                "median": 0.171
+            },
+            "instance_value": 0.0955,
+            "rule": [
+                [
+                    {
+                        "att": "Viscera weight",
+                        "is_continuous": true,
+                        "op": "<=",
+                        "thr": 0.09709405899047852
+                    },
+                    "2 - medium"
+                ],
+                [
+                    {
+                        "att": "Viscera weight",
+                        "is_continuous": true,
+                        "op": ">",
+                        "thr": 0.09532764926552773
+                    },
+                    "2 - medium"
+                ]
+            ],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.11580769717693329
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.09709405899047852
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09532764926552773
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.17307600751519203
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09532764926552773
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09532764926552773
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.10949057713150978
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09532764926552773
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C5": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.09709405899047852
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09532764926552773
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C6": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.09709405899047852
+                        },
+                        "1 - young"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09532764926552773
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C7": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.09709405899047852
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09532764926552773
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C8": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.08653508126735687
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.082533348351717
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C9": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.09532764926552773
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C10": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.10551537945866585
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.10224969685077667
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C11": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.10014549642801285
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09709405899047852
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C12": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.04178480803966522
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C13": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.07761544361710548
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.04178480803966522
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.32742626990266294
+        },
+        {
+            "index": 7,
+            "name": "Shell weight",
+            "rname": "Shell weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.0015,
+                "max": 1.005,
+                "mean": 0.23883085946851804,
+                "std": 0.1392026695223861,
+                "q1": 0.13,
+                "q3": 0.329,
+                "median": 0.234
+            },
+            "instance_value": 0.165,
+            "rule": [
+                [
+                    {
+                        "att": "Shell weight",
+                        "is_continuous": true,
+                        "op": "<=",
+                        "thr": 0.38232818245887756
+                    },
+                    "2 - medium"
+                ]
+            ],
+            "crules": {
+                "C1": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.38232818245887756
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.19054652750492096
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C5": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.5186804756522179
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C6": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.5186804756522179
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C7": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.38232818245887756
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.032949934101103924
+        },
+        {
+            "index": 0,
+            "name": "Sex=M",
+            "rname": "Sex",
+            "type": "categorical",
+            "eda": {
+                "category": "M",
+                "count": 1528
+            },
+            "instance_value": true,
+            "rule": [
+                [
+                    {
+                        "att": "Sex=M",
+                        "is_continuous": false,
+                        "op": ">",
+                        "thr": 0.5
+                    },
+                    "2 - medium"
+                ]
+            ],
+            "crules": {},
+            "feature_importance": 0.0037575897167098993
+        },
+        {
+            "index": 0,
+            "name": "Sex=F",
+            "rname": "Sex",
+            "type": "categorical",
+            "eda": {
+                "category": "F",
+                "count": 1307
+            },
+            "instance_value": false,
+            "rule": [],
+            "crules": {
+                "C8": [
+                    [
+                        {
+                            "att": "Sex=F",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C9": [
+                    [
+                        {
+                            "att": "Sex=F",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C12": [
+                    [
+                        {
+                            "att": "Sex=F",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1 - young"
+                    ]
+                ],
+                "C13": [
+                    [
+                        {
+                            "att": "Sex=F",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.0037575897167098993
+        },
+        {
+            "index": 0,
+            "name": "Sex=I",
+            "rname": "Sex",
+            "type": "categorical",
+            "eda": {
+                "category": "I",
+                "count": 1342
+            },
+            "instance_value": false,
+            "rule": [],
+            "crules": {},
+            "feature_importance": 0.0037575897167098993
+        }
+    ],
+    "predicted_class": "2 - medium",
+    "true_class": "2 - medium",
+    "predicted_proba": {
+        "1 - young": 0.25,
+        "2 - medium": 0.39,
+        "3 - old": 0.36
+    }
+}

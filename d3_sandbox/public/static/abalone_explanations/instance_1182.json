@@ -1,0 +1,538 @@
+{
+    "features": [
+        {
+            "index": 1,
+            "name": "Length",
+            "rname": "Length",
+            "type": "numeric",
+            "eda": {
+                "min": 0.075,
+                "max": 0.815,
+                "mean": 0.5239920995930094,
+                "std": 0.12009291256479956,
+                "q1": 0.45,
+                "q3": 0.615,
+                "median": 0.545
+            },
+            "instance_value": 0.48,
+            "rule": [],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.4929511249065399
+                        },
+                        "2 - medium"
+                    ],
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.4091491848230362
+                        },
+                        "2 - medium"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.42812107503414154
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Length",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.42812107503414154
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.04525135959894549
+        },
+        {
+            "index": 2,
+            "name": "Diameter",
+            "rname": "Diameter",
+            "type": "numeric",
+            "eda": {
+                "min": 0.055,
+                "max": 0.65,
+                "mean": 0.40788125448886764,
+                "std": 0.09923986613365945,
+                "q1": 0.35,
+                "q3": 0.48,
+                "median": 0.425
+            },
+            "instance_value": 0.37,
+            "rule": [],
+            "crules": {
+                "C2": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2853388860821724
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2853388860821724
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.3780743330717087
+                        },
+                        "2 - medium"
+                    ],
+                    [
+                        {
+                            "att": "Diameter",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.24671907722949982
+                        },
+                        "2 - medium"
+                    ]
+                ]
+            },
+            "feature_importance": 0.009894551675187798
+        },
+        {
+            "index": 3,
+            "name": "Height",
+            "rname": "Height",
+            "type": "numeric",
+            "eda": {
+                "min": 0.0,
+                "max": 1.13,
+                "mean": 0.13951639932966242,
+                "std": 0.041827056607257274,
+                "q1": 0.115,
+                "q3": 0.165,
+                "median": 0.14
+            },
+            "instance_value": 0.135,
+            "rule": [],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.16755937784910202
+                        },
+                        "2 - medium"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.40350523591041565
+                        },
+                        "2 - medium"
+                    ],
+                    [
+                        {
+                            "att": "Height",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.09054780006408691
+                        },
+                        "2 - medium"
+                    ]
+                ]
+            },
+            "feature_importance": 0.16543641390639527
+        },
+        {
+            "index": 4,
+            "name": "Whole weight",
+            "rname": "Whole weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.002,
+                "max": 2.8255,
+                "mean": 0.8287421594445774,
+                "std": 0.4903890182309977,
+                "q1": 0.4415,
+                "q3": 1.153,
+                "median": 0.7995
+            },
+            "instance_value": 0.6315,
+            "rule": [],
+            "crules": {
+                "C2": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.6095262765884399
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Whole weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.6095262765884399
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.008629383617101076
+        },
+        {
+            "index": 5,
+            "name": "Shucked weight",
+            "rname": "Shucked weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.001,
+                "max": 1.488,
+                "mean": 0.35936748862820206,
+                "std": 0.22196294903322014,
+                "q1": 0.186,
+                "q3": 0.502,
+                "median": 0.336
+            },
+            "instance_value": 0.3445,
+            "rule": [],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.5669494271278381
+                        },
+                        "2 - medium"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.4756828248500824
+                        },
+                        "2 - medium"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.4192907363176346
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.4192907363176346
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.5156495273113251
+                        },
+                        "2 - medium"
+                    ],
+                    [
+                        {
+                            "att": "Shucked weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.21172337979078293
+                        },
+                        "2 - medium"
+                    ]
+                ]
+            },
+            "feature_importance": 0.07773799676619733
+        },
+        {
+            "index": 6,
+            "name": "Viscera weight",
+            "rname": "Viscera weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.0005,
+                "max": 0.76,
+                "mean": 0.1805936078525257,
+                "std": 0.10961425025968446,
+                "q1": 0.0935,
+                "q3": 0.253,
+                "median": 0.171
+            },
+            "instance_value": 0.1015,
+            "rule": [
+                [
+                    {
+                        "att": "Viscera weight",
+                        "is_continuous": true,
+                        "op": "<=",
+                        "thr": 0.16376841813325882
+                    },
+                    "1 - young"
+                ]
+            ],
+            "crules": {
+                "C1": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.16376841813325882
+                        },
+                        "2 - medium"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.05310794967226684
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Viscera weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.05310794967226684
+                        },
+                        "3 - old"
+                    ]
+                ]
+            },
+            "feature_importance": 0.02655839752012706
+        },
+        {
+            "index": 7,
+            "name": "Shell weight",
+            "rname": "Shell weight",
+            "type": "numeric",
+            "eda": {
+                "min": 0.0015,
+                "max": 1.005,
+                "mean": 0.23883085946851804,
+                "std": 0.1392026695223861,
+                "q1": 0.13,
+                "q3": 0.329,
+                "median": 0.234
+            },
+            "instance_value": 0.161,
+            "rule": [
+                [
+                    {
+                        "att": "Shell weight",
+                        "is_continuous": true,
+                        "op": "<=",
+                        "thr": 0.20115367323160172
+                    },
+                    "1 - young"
+                ]
+            ],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.26688529551029205
+                        },
+                        "2 - medium"
+                    ],
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.2124318853020668
+                        },
+                        "2 - medium"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.20115367323160172
+                        },
+                        "2 - medium"
+                    ],
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.14092015847563744
+                        },
+                        "2 - medium"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.3700798749923706
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.3306678235530853
+                        },
+                        "3 - old"
+                    ],
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.26688529551029205
+                        },
+                        "3 - old"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 0.2124318853020668
+                        },
+                        "2 - medium"
+                    ],
+                    [
+                        {
+                            "att": "Shell weight",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 0.20115367323160172
+                        },
+                        "2 - medium"
+                    ]
+                ]
+            },
+            "feature_importance": 0.6652356155090108
+        },
+        {
+            "index": 0,
+            "name": "Sex=M",
+            "rname": "Sex",
+            "type": "categorical",
+            "eda": {
+                "category": "M",
+                "count": 1528
+            },
+            "instance_value": true,
+            "rule": [],
+            "crules": {},
+            "feature_importance": 0
+        },
+        {
+            "index": 0,
+            "name": "Sex=F",
+            "rname": "Sex",
+            "type": "categorical",
+            "eda": {
+                "category": "F",
+                "count": 1307
+            },
+            "instance_value": false,
+            "rule": [],
+            "crules": {},
+            "feature_importance": 0
+        },
+        {
+            "index": 0,
+            "name": "Sex=I",
+            "rname": "Sex",
+            "type": "categorical",
+            "eda": {
+                "category": "I",
+                "count": 1342
+            },
+            "instance_value": false,
+            "rule": [],
+            "crules": {},
+            "feature_importance": 0
+        }
+    ],
+    "predicted_class": "1 - young",
+    "true_class": "1 - young",
+    "predicted_proba": {
+        "1 - young": 0.72,
+        "2 - medium": 0.2,
+        "3 - old": 0.08
+    }
+}
