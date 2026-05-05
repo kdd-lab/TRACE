@@ -1749,10 +1749,15 @@ function preprocessData(data) {
         return [c, 0];
       }
       // check if th exp_values of crmatrix are equal to the exp_values of rmatrix
-      if (e.crmatrix[i].map((v, j) => v.exp_value === e.rmatrix[0][j].exp_value)
-        .reduce((acc, curr) => acc && curr, true)) {
+      if (e.crmatrix[i].every((v, j) => v.exp_value === e.rmatrix[0][j].exp_value)) {
         return [c, 1];
       }
+
+      // check if the exp_values of crmatrix are equal to the vector of values
+      if(e.crmatrix[i].every((v, j) => (v.exp_value === 1 && e.values[j].instance_value === true) || (v.exp_value === 0 && e.values[j].instance_value === false))) {
+        return [c, 1];
+      }
+
       return [c, 2];
     })),
     rulePredicateMap: Object.fromEntries(['R0'].map(c => [c, (
