@@ -55,7 +55,7 @@ def load_data_from_csv(class_field, number_of_dataset):
     if class_field == "Rings":
         df['Rings'] = pd.cut(df['Rings'],
                              bins=[-np.inf, 8, 10, np.inf],
-                             labels=['young', 'medium', 'old'])
+                             labels=['1 - young', '2 - medium', '3 - old'])
     if class_field == "default":
         df['default'] = df['default'].astype(str)
     df_prep = df.drop(columns=[class_field])
@@ -103,12 +103,14 @@ class CustomJSONEncoder(json.JSONEncoder):
 def select_and_explain_instance(number_of_dataset,class_field,bbox, X_train, X_test, y_test, sample_length):
     datasets = ['titanic_c.csv', 'german_credit.csv', 'abalone.csv', 'iris.csv']
     source_file = f'../datasets/{datasets[number_of_dataset]}'
-    dataset = TabularDataset.from_csv(source_file, class_name=class_field)
-    df_raw = pd.read_csv(source_file, skipinitialspace=True)
+    df_raw = pd.read_csv(source_file, skipinitialspace=True, na_values='?', keep_default_na=True)
     if class_field == "Rings":
-        df_raw['Rings'] = pd.cut(df_raw['Rings'], bins=[-np.inf, 8, 10, np.inf], labels=['young', 'medium', 'old'])
+        df_raw['Rings'] = pd.cut(df_raw['Rings'], bins=[-np.inf, 8, 10, np.inf], labels=['1 - young', '2 - medium', '3 - old'])
     if class_field == "default":
-        dataset.df['default'] = dataset.df['default'].astype(str)
+        df_raw['default'] = df_raw['default'].astype(str)
+    dataset = TabularDataset(df_raw, class_name=class_field)
+
+
     # dataset = TabularDataset(df_raw, class_name=class_field)
     dataset.update_descriptor()
     enc = ColumnTransformerEnc(dataset.descriptor)
@@ -277,11 +279,23 @@ if __name__ == '__main__':
     # print(f'Instance {inst_num} explained with {num_crules} counter rules')
     # print(f'Files saved in {path}')
 
-    number_of_dataset = 1  # Select the dataset index (0 for Titanic, 1 for German Credit, etc.)
-    class_field = "default"  # Select the proper class field for the dataset
-    folder = "german_explanations" #Select the folder to save the result
+    datasets_parameters = {
+        "titanic": {"class_field": "survived", "folder": "titanic_explanations"},
+        "german": {"class_field": "default", "folder": "german_explanations"},
+        "abalone": {"class_field": "Rings", "folder": "abalone_explanations"},
+        "iris": {"class_field": "variety", "folder": "iris_explanations"},
+    }
+
+    current_dataset = 'iris'  # Change this to select the dataset
+    class_field = datasets_parameters[current_dataset]["class_field"]
+    folder = datasets_parameters[current_dataset]["folder"]
+    dataset_index = ['titanic', 'german', 'abalone', 'iris'].index(current_dataset)
+
+    # dataset_index = 1  # Select the dataset index (0 for Titanic, 1 for German Credit, etc.)
+    # class_field = "default"  # Select the proper class field for the dataset
+    # folder = "german_explanations" #Select the folder to save the result
     sample_length = 20  # Number of instances to explain
-    df, preprocessor, class_field = load_data_from_csv(class_field, number_of_dataset)
+    df, preprocessor, class_field = load_data_from_csv(class_field, dataset_index)
     model, X_test, X_train, y_test, _ =  train_model(df, preprocessor, class_field)
 
-    instance = select_and_explain_instance(number_of_dataset, class_field, model, X_train, X_test, y_test, sample_length)
+    instance = select_and_explain_instance(dataset_index, class_field, model, X_train, X_test, y_test, sample_length)
