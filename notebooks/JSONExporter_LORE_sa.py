@@ -109,23 +109,25 @@ def select_and_explain_instance(number_of_dataset,class_field,bbox, X_train, X_t
         df_raw['Rings'] = pd.cut(df_raw['Rings'], bins=[-np.inf, 8, 10, np.inf], labels=['young', 'medium', 'old'])
     if class_field == "default":
         dataset.df['default'] = dataset.df['default'].astype(str)
-    dataset = TabularDataset(df_raw, class_name=class_field)
+    # dataset = TabularDataset(df_raw, class_name=class_field)
     dataset.update_descriptor()
     enc = ColumnTransformerEnc(dataset.descriptor)
     generator = GeneticGenerator(bbox=bbox, dataset=dataset, encoder=enc, ocr=0.1)
-    surrogate = DecisionTreeSurrogate(prune_tree=True)
+    surrogate = DecisionTreeSurrogate(prune_tree=True, grid_search_tree=False)
     tabularLore = Lore(bbox, dataset, enc, generator, surrogate)
 
 
+    instance_numbers = []
 
     # select n random indexes from X_test
     for inst_num in random.sample(range(len(X_test)), sample_length):  #range(len(X_test)):
         logger.info(f"Explaining instance {inst_num}")
+        instance_numbers.append(inst_num)
         # inst_num = random.randint(0, len(X_test))
         instance = X_test[inst_num]
         true_class = y_test[inst_num]
         #neighbour = generator.generate(instance,200,dataset.descriptor,)
-        l_exp= tabularLore.explain(instance, 3000)
+        l_exp= tabularLore.explain(instance, 1000)
 
         # s_explainer = LimeXAITabularExplainer(bbox) #shap.TreeExplainer(model, X_train_prep)
         # config = {'feature_selection': 'lasso_path'}
@@ -135,6 +137,9 @@ def select_and_explain_instance(number_of_dataset,class_field,bbox, X_train, X_t
 
         predicted_class = bbox.predict(instance.reshape(1, -1))
         predicted_proba = bbox.predict_proba(instance.reshape(1, -1))
+
+        feature_importance_dict = {f: imp for f, imp in l_exp['feature_importances']}
+
 
         descr = dataset.descriptor
         features = []
@@ -156,7 +161,7 @@ def select_and_explain_instance(number_of_dataset,class_field,bbox, X_train, X_t
                 "instance_value": instance[descr['numeric'][f]['index']],
                 "rule": [],
                 "crules": {},
-                "feature_importance": l_exp['feature_importances'][descr['numeric'][f]['index']][0],
+                "feature_importance": feature_importance_dict.get(f, 0.0),
             }
             rule_prem = l_exp['rule']['premises']
             for rule in rule_prem:
@@ -195,7 +200,7 @@ def select_and_explain_instance(number_of_dataset,class_field,bbox, X_train, X_t
                     "instance_value": instance[descr['categorical'][f]['index']] == c,
                     "rule": [],
                     "crules": {},
-                    "feature_importance": l_exp['feature_importances'][descr['categorical'][f]['index']],
+                    "feature_importance": feature_importance_dict.get(f, 0.0),
                 }
                 rule_prem = l_exp['rule']['premises']
                 for rule in rule_prem:
@@ -250,7 +255,7 @@ def select_and_explain_instance(number_of_dataset,class_field,bbox, X_train, X_t
             "true_class": true_class,
             "predicted_proba": { label: prob for label, prob in zip(bbox.classes_, predicted_proba[0]) },
         }
-        path = f'../d3_sandbox/static/{folder}'
+        path = f'../d3_sandbox/public/static/{folder}'
 
         with open(f'{path}/instance_{inst_num}.json', "w") as outfile:
             json.dump(output_data, outfile, cls=CustomJSONEncoder, indent=4)
@@ -258,6 +263,9 @@ def select_and_explain_instance(number_of_dataset,class_field,bbox, X_train, X_t
         # save the output of l_exp.exp to a text file named instance_{inst_num}_lore.txt
         with open(f'{path}/instance_{inst_num}_lore.txt', "w") as outfile:
             outfile.write(str(l_exp))
+
+    print('Instances:')
+    print(instance_numbers)
 
     return instance, len(crules)
 
@@ -269,12 +277,10 @@ if __name__ == '__main__':
     # print(f'Instance {inst_num} explained with {num_crules} counter rules')
     # print(f'Files saved in {path}')
 
-
-
-    number_of_dataset = 3  # Select the dataset index (0 for Titanic, 1 for German Credit, etc.)
-    class_field = "variety"  # Select the proper class field for the dataset
-    folder = "iris_explanations" #Select the folder to save the result
-    sample_length = 10  # Number of instances to explain
+    number_of_dataset = 1  # Select the dataset index (0 for Titanic, 1 for German Credit, etc.)
+    class_field = "default"  # Select the proper class field for the dataset
+    folder = "german_explanations" #Select the folder to save the result
+    sample_length = 20  # Number of instances to explain
     df, preprocessor, class_field = load_data_from_csv(class_field, number_of_dataset)
     model, X_test, X_train, y_test, _ =  train_model(df, preprocessor, class_field)
 
