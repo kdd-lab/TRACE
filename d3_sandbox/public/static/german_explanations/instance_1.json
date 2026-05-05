@@ -9,7 +9,7 @@
                 "min": 4,
                 "max": 72,
                 "mean": 20.903,
-                "std": 12.058814452756392,
+                "std": 12.058814452756375,
                 "q1": 12.0,
                 "q3": 24.0,
                 "median": 18.0
@@ -21,13 +21,25 @@
                         "att": "duration_in_month",
                         "is_continuous": true,
                         "op": "<=",
-                        "thr": 27.5
+                        "thr": 22.5
                     },
                     "0"
                 ]
             ],
-            "crules": {},
-            "feature_importance": 0.9729798939271959
+            "crules": {
+                "C1": [
+                    [
+                        {
+                            "att": "duration_in_month",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 22.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.019982759811917796
         },
         {
             "index": 4,
@@ -38,25 +50,38 @@
                 "min": 250,
                 "max": 18424,
                 "mean": 3271.258,
-                "std": 2822.73687596044,
+                "std": 2822.7368759604406,
                 "q1": 1365.5,
                 "q3": 3972.25,
                 "median": 2319.5
             },
             "instance_value": 882,
-            "rule": [
-                [
-                    {
-                        "att": "credit_amount",
-                        "is_continuous": true,
-                        "op": "<=",
-                        "thr": 5566.0
-                    },
-                    "0"
+            "rule": [],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "credit_amount",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 2819.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "credit_amount",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 7433.5
+                        },
+                        "1"
+                    ]
                 ]
-            ],
-            "crules": {},
-            "feature_importance": 0.005666184575617628
+            },
+            "feature_importance": 0.007883781611928447
         },
         {
             "index": 7,
@@ -67,15 +92,69 @@
                 "min": 1,
                 "max": 4,
                 "mean": 2.973,
-                "std": 1.1187146743126737,
+                "std": 1.1187146743126786,
                 "q1": 2.0,
                 "q3": 4.0,
                 "median": 3.0
             },
             "instance_value": 4,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.0929828236848873
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "installment_as_income_perc",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 3.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "installment_as_income_perc",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 3.5
+                        },
+                        "1"
+                    ],
+                    [
+                        {
+                            "att": "installment_as_income_perc",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 1.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "installment_as_income_perc",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 3.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "installment_as_income_perc",
+                            "is_continuous": true,
+                            "op": ">",
+                            "thr": 3.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.01615373821791577
         },
         {
             "index": 10,
@@ -86,7 +165,7 @@
                 "min": 1,
                 "max": 4,
                 "mean": 2.845,
-                "std": 1.1037178956568579,
+                "std": 1.1037178956568536,
                 "q1": 2.0,
                 "q3": 4.0,
                 "median": 3.0
@@ -94,7 +173,7 @@
             "instance_value": 4,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.14946011411074
+            "feature_importance": 0.0030452988199466996
         },
         {
             "index": 12,
@@ -105,15 +184,60 @@
                 "min": 19,
                 "max": 75,
                 "mean": 35.546,
-                "std": 11.375468574317502,
+                "std": 11.375468574317512,
                 "q1": 27.0,
                 "q3": 42.0,
                 "median": 33.0
             },
             "instance_value": 23,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.8712568667807762
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "age",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 41.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "age",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 41.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "age",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 41.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "age",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 41.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.012829152283116383
         },
         {
             "index": 15,
@@ -124,15 +248,27 @@
                 "min": 1,
                 "max": 4,
                 "mean": 1.407,
-                "std": 0.5776544682460991,
+                "std": 0.5776544682461002,
                 "q1": 1.0,
                 "q3": 2.0,
                 "median": 1.0
             },
             "instance_value": 2,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.2334044230259541
+            "crules": {
+                "C4": [
+                    [
+                        {
+                            "att": "credits_this_bank",
+                            "is_continuous": true,
+                            "op": "<=",
+                            "thr": 1.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.0005424759756824954
         },
         {
             "index": 17,
@@ -143,7 +279,7 @@
                 "min": 1,
                 "max": 2,
                 "mean": 1.155,
-                "std": 0.36208577175319234,
+                "std": 0.36208577175319395,
                 "q1": 1.0,
                 "q3": 1.0,
                 "median": 1.0
@@ -151,7 +287,7 @@
             "instance_value": 1,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.5688950389420209
+            "feature_importance": 0
         },
         {
             "index": 0,
@@ -164,8 +300,31 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.3300577514769101
+            "crules": {
+                "C3": [
+                    [
+                        {
+                            "att": "account_check_status=< 0 DM",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "account_check_status=< 0 DM",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0
         },
         {
             "index": 0,
@@ -179,7 +338,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.12513462979008172
+            "feature_importance": 0
         },
         {
             "index": 0,
@@ -192,8 +351,42 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.8098138568575892
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "account_check_status=no checking account",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "account_check_status=no checking account",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "account_check_status=no checking account",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0
         },
         {
             "index": 0,
@@ -207,7 +400,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.5576093274298743
+            "feature_importance": 0
         },
         {
             "index": 2,
@@ -221,7 +414,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.7097588386353486
+            "feature_importance": 0.0032939884710403416
         },
         {
             "index": 2,
@@ -234,8 +427,31 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.7039090350655415
+            "crules": {
+                "C3": [
+                    [
+                        {
+                            "att": "credit_history=existing credits paid back duly till now",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "credit_history=existing credits paid back duly till now",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.0032939884710403416
         },
         {
             "index": 2,
@@ -249,7 +465,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.6409362683605161
+            "feature_importance": 0.0032939884710403416
         },
         {
             "index": 2,
@@ -261,31 +477,9 @@
                 "count": 40
             },
             "instance_value": false,
-            "rule": [
-                [
-                    {
-                        "att": "credit_history=no credits taken/ all credits paid back duly",
-                        "is_continuous": false,
-                        "op": "<=",
-                        "thr": 0.5
-                    },
-                    "0"
-                ]
-            ],
-            "crules": {
-                "C0": [
-                    [
-                        {
-                            "att": "credit_history=no credits taken/ all credits paid back duly",
-                            "is_continuous": false,
-                            "op": ">",
-                            "thr": 0.5
-                        },
-                        "1"
-                    ]
-                ]
-            },
-            "feature_importance": 0.7022153849828541
+            "rule": [],
+            "crules": {},
+            "feature_importance": 0.0032939884710403416
         },
         {
             "index": 2,
@@ -299,7 +493,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.5088501643014172
+            "feature_importance": 0.0032939884710403416
         },
         {
             "index": 3,
@@ -313,7 +507,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.4266173620442969
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -336,8 +530,20 @@
                     "0"
                 ]
             ],
-            "crules": {},
-            "feature_importance": 0.8682877616511118
+            "crules": {
+                "C1": [
+                    [
+                        {
+                            "att": "purpose=(vacation - does not exist?)",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -350,8 +556,53 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.767102142119894
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "purpose=radio/television",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "purpose=radio/television",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "purpose=radio/television",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "purpose=radio/television",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -365,7 +616,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.9264732247799893
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -379,7 +630,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.7609603309526888
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -393,7 +644,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.1498199761106671
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -406,8 +657,42 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.6782086951320927
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "purpose=repairs",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "purpose=repairs",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "purpose=repairs",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -421,7 +706,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.5059885488787809
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -434,8 +719,20 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.5893690815673088
+            "crules": {
+                "C2": [
+                    [
+                        {
+                            "att": "purpose=furniture/equipment",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 3,
@@ -449,7 +746,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.1715608254346035
+            "feature_importance": 0.001813236627379825
         },
         {
             "index": 5,
@@ -463,7 +760,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.47567116556568356
+            "feature_importance": 0.014430241315205709
         },
         {
             "index": 5,
@@ -476,8 +773,53 @@
             },
             "instance_value": true,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.11937964658021705
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "savings=... < 100 DM",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "savings=... < 100 DM",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "savings=... < 100 DM",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "savings=... < 100 DM",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.014430241315205709
         },
         {
             "index": 5,
@@ -491,7 +833,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.0845678402816682
+            "feature_importance": 0.014430241315205709
         },
         {
             "index": 5,
@@ -505,7 +847,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.3296214025318648
+            "feature_importance": 0.014430241315205709
         },
         {
             "index": 5,
@@ -519,7 +861,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.5402620676105396
+            "feature_importance": 0.014430241315205709
         },
         {
             "index": 6,
@@ -533,7 +875,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.10709405007434591
+            "feature_importance": 0.009884907367429802
         },
         {
             "index": 6,
@@ -547,7 +889,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.018993151600526503
+            "feature_importance": 0.009884907367429802
         },
         {
             "index": 6,
@@ -561,7 +903,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.7676785186922856
+            "feature_importance": 0.009884907367429802
         },
         {
             "index": 6,
@@ -575,7 +917,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.772497917964361
+            "feature_importance": 0.009884907367429802
         },
         {
             "index": 6,
@@ -588,8 +930,53 @@
             },
             "instance_value": true,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.4797168645384905
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "present_emp_since=... < 1 year ",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "present_emp_since=... < 1 year ",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "present_emp_since=... < 1 year ",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "present_emp_since=... < 1 year ",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.009884907367429802
         },
         {
             "index": 8,
@@ -603,7 +990,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.9893654739870774
+            "feature_importance": 0
         },
         {
             "index": 8,
@@ -617,7 +1004,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.49576004678059205
+            "feature_importance": 0
         },
         {
             "index": 8,
@@ -631,7 +1018,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.4194301883114995
+            "feature_importance": 0
         },
         {
             "index": 8,
@@ -643,9 +1030,19 @@
                 "count": 92
             },
             "instance_value": false,
-            "rule": [],
+            "rule": [
+                [
+                    {
+                        "att": "personal_status_sex=male : married/widowed",
+                        "is_continuous": false,
+                        "op": "<=",
+                        "thr": 0.5
+                    },
+                    "0"
+                ]
+            ],
             "crules": {},
-            "feature_importance": 0.9697443737829128
+            "feature_importance": 0
         },
         {
             "index": 9,
@@ -658,8 +1055,20 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.6238003831766873
+            "crules": {
+                "C1": [
+                    [
+                        {
+                            "att": "other_debtors=none",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.0028315243039169847
         },
         {
             "index": 9,
@@ -673,7 +1082,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.3983661703630693
+            "feature_importance": 0.0028315243039169847
         },
         {
             "index": 9,
@@ -687,7 +1096,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.42588070754794194
+            "feature_importance": 0.0028315243039169847
         },
         {
             "index": 11,
@@ -699,17 +1108,7 @@
                 "count": 282
             },
             "instance_value": true,
-            "rule": [
-                [
-                    {
-                        "att": "property=real estate",
-                        "is_continuous": false,
-                        "op": ">",
-                        "thr": 0.5
-                    },
-                    "0"
-                ]
-            ],
+            "rule": [],
             "crules": {
                 "C0": [
                     [
@@ -721,9 +1120,42 @@
                         },
                         "1"
                     ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "property=real estate",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "property=real estate",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "property=real estate",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
                 ]
             },
-            "feature_importance": 0.6182073641123897
+            "feature_importance": 0.005377685245289665
         },
         {
             "index": 11,
@@ -736,8 +1168,20 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.7559209614914362
+            "crules": {
+                "C3": [
+                    [
+                        {
+                            "att": "property=if not A121 : building society savings agreement/ life insurance",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.005377685245289665
         },
         {
             "index": 11,
@@ -751,7 +1195,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.35561781834030703
+            "feature_importance": 0.005377685245289665
         },
         {
             "index": 11,
@@ -765,7 +1209,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.8699331870959759
+            "feature_importance": 0.005377685245289665
         },
         {
             "index": 13,
@@ -777,21 +1221,19 @@
                 "count": 814
             },
             "instance_value": true,
-            "rule": [],
-            "crules": {
-                "C0": [
-                    [
-                        {
-                            "att": "other_installment_plans=none",
-                            "is_continuous": false,
-                            "op": ">",
-                            "thr": 0.5
-                        },
-                        "1"
-                    ]
+            "rule": [
+                [
+                    {
+                        "att": "other_installment_plans=none",
+                        "is_continuous": false,
+                        "op": ">",
+                        "thr": 0.5
+                    },
+                    "0"
                 ]
-            },
-            "feature_importance": 0.7750006340991616
+            ],
+            "crules": {},
+            "feature_importance": 0.0017152086401495059
         },
         {
             "index": 13,
@@ -803,9 +1245,75 @@
                 "count": 139
             },
             "instance_value": false,
-            "rule": [],
-            "crules": {},
-            "feature_importance": 0.7663544844372717
+            "rule": [
+                [
+                    {
+                        "att": "other_installment_plans=bank",
+                        "is_continuous": false,
+                        "op": "<=",
+                        "thr": 0.5
+                    },
+                    "0"
+                ]
+            ],
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "other_installment_plans=bank",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C1": [
+                    [
+                        {
+                            "att": "other_installment_plans=bank",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C2": [
+                    [
+                        {
+                            "att": "other_installment_plans=bank",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "other_installment_plans=bank",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "other_installment_plans=bank",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.0017152086401495059
         },
         {
             "index": 13,
@@ -819,7 +1327,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.013847710837824323
+            "feature_importance": 0.0017152086401495059
         },
         {
             "index": 14,
@@ -832,8 +1340,20 @@
             },
             "instance_value": true,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.1770174338986925
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "housing=own",
+                            "is_continuous": false,
+                            "op": ">",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0.009587274464247071
         },
         {
             "index": 14,
@@ -847,7 +1367,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.056564082734014365
+            "feature_importance": 0.009587274464247071
         },
         {
             "index": 14,
@@ -860,20 +1380,8 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {
-                "C0": [
-                    [
-                        {
-                            "att": "housing=rent",
-                            "is_continuous": false,
-                            "op": ">",
-                            "thr": 0.5
-                        },
-                        "1"
-                    ]
-                ]
-            },
-            "feature_importance": 0.5606931201563139
+            "crules": {},
+            "feature_importance": 0.009587274464247071
         },
         {
             "index": 16,
@@ -887,7 +1395,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.18835472192489833
+            "feature_importance": 0
         },
         {
             "index": 16,
@@ -901,7 +1409,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.02511984380209198
+            "feature_importance": 0
         },
         {
             "index": 16,
@@ -915,7 +1423,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.8368474905040914
+            "feature_importance": 0
         },
         {
             "index": 16,
@@ -929,7 +1437,7 @@
             "instance_value": false,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.8186791987268061
+            "feature_importance": 0
         },
         {
             "index": 18,
@@ -942,20 +1450,8 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {
-                "C0": [
-                    [
-                        {
-                            "att": "telephone=yes, registered under the customers name ",
-                            "is_continuous": false,
-                            "op": "<=",
-                            "thr": 0.5
-                        },
-                        "1"
-                    ]
-                ]
-            },
-            "feature_importance": 0.11630749086962944
+            "crules": {},
+            "feature_importance": 0.002616659398168266
         },
         {
             "index": 18,
@@ -969,7 +1465,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.8884132010846965
+            "feature_importance": 0.002616659398168266
         },
         {
             "index": 19,
@@ -983,7 +1479,7 @@
             "instance_value": true,
             "rule": [],
             "crules": {},
-            "feature_importance": 0.9905844587631619
+            "feature_importance": 0
         },
         {
             "index": 19,
@@ -996,14 +1492,48 @@
             },
             "instance_value": false,
             "rule": [],
-            "crules": {},
-            "feature_importance": 0.7434352237035896
+            "crules": {
+                "C0": [
+                    [
+                        {
+                            "att": "foreign_worker=no",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C3": [
+                    [
+                        {
+                            "att": "foreign_worker=no",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ],
+                "C4": [
+                    [
+                        {
+                            "att": "foreign_worker=no",
+                            "is_continuous": false,
+                            "op": "<=",
+                            "thr": 0.5
+                        },
+                        "1"
+                    ]
+                ]
+            },
+            "feature_importance": 0
         }
     ],
     "predicted_class": "0",
-    "true_class": 0,
-    "predicted_proba": [
-        0.76,
-        0.24
-    ]
+    "true_class": "0",
+    "predicted_proba": {
+        "0": 0.76,
+        "1": 0.24
+    }
 }

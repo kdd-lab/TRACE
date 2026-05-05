@@ -2,7 +2,7 @@ const abaloneInstances = [
   62, 83, 1073
 ];
 
-const germanInstances = [11, 17, 70, 55];
+const germanInstances = [288, 294, 60, 296, 41, 47, 105, 74, 1, 223, 298, 27, 128, 181, 56, 224, 31, 80, 99, 141];
 
 const irisInstances = [20, 34, 39];
 
